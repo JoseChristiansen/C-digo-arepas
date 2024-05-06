@@ -28,15 +28,30 @@ elif edad > 10:
     elif genero == "2":
         welcome += "a"
         genero = "Niña"
-
     else:
-        welcome = "debe elegir una opcion, vuelva a correr el programa"
+        print("debe elegir una opcion valida, vuelva a correr el programa")
+        quit()
     print(welcome)
 
 
 
-region = input("De que region eres??: ")
+region = input("""De que region eres??: 
+               1. Caracas
+               2. Bogota
+               3. Santiago de Chile
+               
+               
+            =>  """)
 
+if region == "1":
+    region = "Caracas"
+elif region == "2":
+    region = "Bogota"
+elif region == "3":
+    region = "Santiago de Chile"
+else: 
+    print("Debe elegir una opcion valida, vuelva a correr el programa")
+    quit()
 
 pokemon = input("""Cual es tu pokemon favorito??: 
                1. Bulbasaur
@@ -50,6 +65,9 @@ elif pokemon == "2":
     pokemon = "Charmander"
 elif pokemon == "3":
     pokemon = "Squirtle"
+else: 
+    print("Debe elegir una opcion valida, vuelva a correr el programa")
+    quit()
 
 
 print(f"""Tu perfil de entrenador es:
